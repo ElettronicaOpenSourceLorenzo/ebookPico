@@ -1,3 +1,6 @@
+""" Lorenzo Neri - Elettronica Open Source
+"""
+
 import machine
 import utime
 
