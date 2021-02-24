@@ -1,32 +1,41 @@
+""" Lorenzo Neri - Elettronica Open Source
+"""
+
+
+# importo i pacchetti necessari
 import machine
 import utime
 
+# imposto i pin a cui abbiamo connesso SDA ed SCL del display
+sda = machine.Pin(0)
+scl = machine.Pin(1)
 
-sda=machine.Pin(0)
+# imposto la comunicazione I2C
+i2c = machine.I2C(0,sda=sda, scl=scl, freq=400000)
 
-scl=machine.Pin(1)
-
-
-i2c=machine.I2C(0,sda=sda, scl=scl, freq=400000)
-
-
+# imposto la variabile per la rilevazione di temperatura dal sensore built-in
 adc = machine.ADC(4)
 
-
+# imposto il fattore di conversione
 fattore_conversione = 3.3 / (65535)
 
 while True:
+
+    # eseguo la lettura della temperatura
     lettura = adc.read_u16() * fattore_conversione
     
-    temperatura_celsius = 25 - (lettura - 0.706)/0.001721
+    # la converto in gradi Celsius
+    temperatura_celsius = 27 - (lettura - 0.706)/0.001721
     
+    # invio i comandi I2C
     i2c.writeto(114, '\x7C')
     i2c.writeto(114, '\x2D')
     
+    # racchiudo tutto in una stringa
+    stringa_da_stampare = "Temperatura: " + str(temperatura_celsius)
     
-stringa_da_stampare = "Temp: " + str(temperatura_celsius)
-    
+    # stampo sul display
     i2c.writeto(114, stringa_da_stampare)
     
-    
-utime.sleep(2)
+    # attendo due secondi
+    utime.sleep(2)

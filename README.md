@@ -39,4 +39,4 @@ Gli script sono suddivisi come segue:
 Maggiori informazioni sono disponibili [qui](https://www.gnu.org/licenses/gpl-3.0.html)*.
 
 #### &nbsp;
-### *Elettronica Open Source © 2021 - CONTANGO SL - NIF/VAT ESB76354323 - Las Palmas de Gran Canaria*
+##### *Elettronica Open Source © 2021 - CONTANGO SL - NIF/VAT ESB76354323 - Las Palmas de Gran Canaria*
