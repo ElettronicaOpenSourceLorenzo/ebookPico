@@ -1,9 +1,14 @@
-# librerie necessarie
+""" Lorenzo Neri - Elettronica Open Source
+"""
+
+
+# importo le i pacchetti necessari
 import machine
 import utime
 
-# usiamo il canale numero 4 dell'ADC di Pico per rilevare
+# usiamo il canale numero 4 dell'ADC di Pico per rilevare la temperatura
 sensor_temp = machine.ADC(4)
+
 # fattore di conversione necessario 
 conversion_factor = 3.3 / (65535)
 
@@ -17,6 +22,7 @@ while True:
 
     # correggiamo assieme al fattore di conversione per trasformare in Celsius
     temperatura = 27 - (lettura - 0.706)/0.001721
+    
     # stampiamo a video
     print(temperatura)
 

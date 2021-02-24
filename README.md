@@ -10,5 +10,11 @@
 #### &nbsp;
 
 #### *In questo repository troverai tutti i file Python per realizzare i progetti all'interno dell'ebook su Raspberry Pi Pi realizzato da Elettronica Open Source.*
+#### &nbsp;
+## I file dei progetti
+#### &nbsp;
+I progetti affrontati all'interno dell'ebook sono composti da un singolo file Python ciascuno.
+
+Sono suddivisi come segue:
 
 
