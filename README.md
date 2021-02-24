@@ -13,9 +13,9 @@
 #### &nbsp;
 ## I file dei progetti
 #### &nbsp;
-I progetti affrontati all'interno dell'ebook sono composti da un singolo file Python ciascuno.
+I progetti affrontati all'interno dell'ebook sono composti da un singolo file Python ciascuno, *ad eccezione del progetto #7 che prevede diversi casi d'uso.*
 
-Sono suddivisi come segue:
+Gli script sono suddivisi come segue:
 
 **- Progetto 1: accensione/spegnimento di un LED:** *lampeggio.py*;
 
